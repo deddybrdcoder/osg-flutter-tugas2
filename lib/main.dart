@@ -40,41 +40,53 @@ class MyApp extends StatelessWidget {
                 // color: Colors.pink,
                 margin: EdgeInsets.all(30.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Icon(Icons.star),
-                    Icon(Icons.star),
-                    Icon(Icons.star_half),
-                    Icon(Icons.star_border),
-                    Icon(Icons.star_border),
-                    Align(
-                        alignment: Alignment.bottomRight,
-                        child: Text("1000 Vote"))
+                    Row(
+                      children: <Widget>[
+                        Icon(Icons.star),
+                        Icon(Icons.star),
+                        Icon(Icons.star_half),
+                        Icon(Icons.star_border),
+                        Icon(Icons.star_border),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[Text("1000 Vote")],
+                    )
                   ],
                 ),
               ),
               Container(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Container(
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Text("330"),
-                      ),
+                    Column(
+                      children: <Widget>[
+                        Icon(Icons.favorite),
+                        Text("550"),
+                      ],
                     ),
-                    Icon(Icons.favorite, size: 50.0),
-                    Text("550"),
-                    Icon(
-                      Icons.favorite_border,
-                      size: 50.0,
+                    Column(
+                      children: <Widget>[
+                        Icon(Icons.favorite_border),
+                        Text("450")
+                      ],
                     ),
-                    Text(
-                      "450",
+                    Column(
+                      children: <Widget>[Icon(Icons.save), Text("300")],
                     ),
-                    Icon(Icons.save),
-                    Icon(Icons.delete),
-                    Icon(Icons.add_box),
+                    Column(
+                      children: <Widget>[Icon(Icons.delete), Text("100")],
+                    ),
+                    Column(
+                      children: <Widget>[Icon(Icons.add_box), Text("150")],
+                    )
+                    // Icon(Icons.favorite),
+                    // Icon(Icons.favorite_border),
+                    // Icon(Icons.save),
+                    // Icon(Icons.delete),
+                    // Icon(Icons.add_box),
                   ],
                 ),
               )
