@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
                   child: Image.asset(
@@ -28,12 +27,11 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
-                // margin: EdgeInsets.all(20.0),
                 color: Colors.green,
                 child: Container(
                   margin: EdgeInsets.all(15.0),
                   child: Text(
-                    "Enim incididunt minim velit et enim. Incididunt laborum ullamco cillum nisi et sunt qui do eu. Do officia aute occaecat consequat consequat in nulla nisi esse laboris sunt irure dolor duis. Ad culpa consequat pariatur ex ea exercitation dolor non consectetur ea. Nulla laborum esse ea culpa qui proident sint ea eu quis sunt. Nostrud ea minim laborum consequat exercitation dolore veniam et ad nostrud mollit. Culpa magna eiusmod deserunt fugiat Lorem.",
+                    "Enim incididunt minim velit et enim. Incididunt laborum ullamco cillum nisi et sunt qui do eu. Do officia aute occaecat consequat consequat in nulla nisi esse laboris sunt irure dolor duis. Ad culpa consequat pariatur ex ea exercitation dolor non consectetur ea. Nulla laborum esse ea culpa qui proident sint ea eu quis sunt.",
                     textAlign: TextAlign.justify,
                   ),
                 ),
@@ -49,20 +47,34 @@ class MyApp extends StatelessWidget {
                     Icon(Icons.star_half),
                     Icon(Icons.star_border),
                     Icon(Icons.star_border),
-                    Text("1000 Vote")
+                    Align(
+                        alignment: Alignment.bottomRight,
+                        child: Text("1000 Vote"))
                   ],
                 ),
               ),
               Container(
-                color: Colors.green,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Icon(Icons.sd_card),
-                    Icon(Icons.sd_storage),
-                    Icon(Icons.security),
-                    Icon(Icons.security),
-                    Icon(Icons.security),
+                    Container(
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Text("330"),
+                      ),
+                    ),
+                    Icon(Icons.favorite, size: 50.0),
+                    Text("550"),
+                    Icon(
+                      Icons.favorite_border,
+                      size: 50.0,
+                    ),
+                    Text(
+                      "450",
+                    ),
+                    Icon(Icons.save),
+                    Icon(Icons.delete),
+                    Icon(Icons.add_box),
                   ],
                 ),
               )
